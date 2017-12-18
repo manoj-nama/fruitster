@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet
 } from 'react-native';
 import { connect } from 'react-redux';
+
+import styles from '../../styles';
 
 class Menu extends Component {
   render() {
@@ -15,14 +16,6 @@ class Menu extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
 
 const mapStateToProps = state => state;
 const MenuContainer = connect(mapStateToProps)(Menu);

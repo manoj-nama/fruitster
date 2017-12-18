@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet
 } from 'react-native';
+import { Constants } from 'expo';
 import { connect } from 'react-redux';
+
+import styles from '../../styles';
 
 class Cart extends Component {
   render() {
@@ -15,14 +17,6 @@ class Cart extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
 
 const mapStateToProps = state => state;
 const CartContainer = connect(mapStateToProps)(Cart);

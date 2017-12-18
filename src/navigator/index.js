@@ -5,6 +5,7 @@ import { Ionicons as Icon } from '@expo/vector-icons';
 import CartScreen from '../views/screens/Cart.screen';
 import UserScreen from '../views/screens/User.screen';
 import MenuScreen from '../views/screens/Menu.screen';
+import SupportScreen from '../views/screens/Support.screen';
 
 const defaultStackNavigationOptions = {
   header: null
@@ -33,6 +34,13 @@ const CartTab = StackNavigator({
 }, {
     navigationOptions: defaultStackNavigationOptions
   });
+const SupportTab = StackNavigator({
+  Support: {
+    screen: SupportScreen
+  }
+}, {
+    navigationOptions: defaultStackNavigationOptions
+  });
 
 const RootNavigator = TabNavigator({
   Menu: {
@@ -47,6 +55,13 @@ const RootNavigator = TabNavigator({
     navigationOptions: {
       tabBarLabel: 'Cart',
       tabBarIcon: ({ tintColor }) => <Icon name={'md-basket'} size={24} color={tintColor} />
+    }
+  },
+  Support: {
+    screen: SupportTab,
+    navigationOptions: {
+      tabBarLabel: 'Support',
+      tabBarIcon: ({ tintColor }) => <Icon name={'ios-quote'} size={24} color={tintColor} />
     }
   },
   User: {
